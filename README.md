@@ -57,7 +57,8 @@ The generation code is largely lifted from Jeffrey Way's [FormField](https://git
 The validation code is inspired by one of his [Laracasts](https://laracasts.com/lessons/form-validation-simplified).
 Basically, this project only exists because I combined two of Mr. Way's projects.
 
-FormMagic is designed to work with [Laravel](http://laravel.com/), though I suppose it can be used as a stand-alone project.
+FormMagic is designed to work with [Laravel](http://laravel.com/), though I suppose it could be used as a
+stand-alone project.  You'll end up pulling in about half of the Laravel code, though.
 
 The readme is largely boosted from Rob Crowe's readme for (the very awesome) [TwigBridge](https://github.com/rcrowe/TwigBridge).
 

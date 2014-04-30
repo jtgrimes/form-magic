@@ -10,7 +10,9 @@
     ],
     "require": {
         "Illuminate/Support":"*",
-        "Illuminate/Validation": "*"
+        "Illuminate/Validation": "*",
+        "Illuminate/Config": "*",
+        "Illuminate/Html": "*"
     },
     "autoload": {
         "psr-4":{
