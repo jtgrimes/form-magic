@@ -9,10 +9,13 @@
         }
     ],
     "require": {
-        "Illuminate/Support":"*",
-        "Illuminate/Validation": "*",
-        "Illuminate/Config": "*",
-        "Illuminate/Html": "*"
+        "php": ">=5.4.0",
+        "Illuminate/Support":"~4",
+        "Illuminate/Validation": "~4",
+        "Illuminate/Html": "~4"
+    },
+    "require-dev": {
+        "phpunit/phpunit":"3.7.*"
     },
     "autoload": {
         "psr-4":{

@@ -31,7 +31,47 @@ abstract class Form {
     /**
      * @var array
      */
-    protected $settings = array();
+    protected $settings = array(
+        /*
+        |--------------------------------------------------------------------------
+        | Wrapper
+        |--------------------------------------------------------------------------
+        |
+        | By default, each form element will be wrapped within this element
+        |
+        */
+        'wrapper' => 'div',
+
+        /*
+        |--------------------------------------------------------------------------
+        | Wrapper Class
+        |--------------------------------------------------------------------------
+        |
+        | By default, the wrapper element will get the following class
+        |
+        */
+        'wrapperClass' => 'form-group',
+
+        /*
+        |--------------------------------------------------------------------------
+        | Input Class
+        |--------------------------------------------------------------------------
+        |
+        | By default, form inputs will get the following class
+        |
+        */
+        'inputClass' => 'form-control',
+
+        /*
+        |--------------------------------------------------------------------------
+        | Label Class
+        |--------------------------------------------------------------------------
+        |
+        | By default, form labels will get the following class
+        |
+        */
+        'labelClass' => 'control-label',
+    );
 
     /**
      * @var \Illuminate\Html\FormBuilder
@@ -45,14 +85,11 @@ abstract class Form {
 
     /**
      * @param Validator $validator
-     * @param Config $config
      * @param \Illuminate\Html\FormBuilder $formBuilder
      */
-    function __construct(Validator $validator, Config $config, FormBuilder $formBuilder) {
+    function __construct(Validator $validator, FormBuilder $formBuilder) {
         $this->validator = $validator;
         $this->builder = $formBuilder;
-        $configSettings = $config->get('form-magic::settings');
-        $this->settings = array_merge($configSettings, $this->settings); // don't forget: later value in array_merge overwrites earlier.
         $this->fieldBuilder = new FormFieldBuilder($this->settings,$formBuilder);
     }
 
