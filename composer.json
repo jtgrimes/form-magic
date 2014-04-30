@@ -1,0 +1,21 @@
+{
+    "name": "jtgrimes/form-magic",
+    "description": "Form generation and validation for Laravel",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "J.T. Grimes",
+            "email": "jtgrimes@gmail.com"
+        }
+    ],
+    "require": {
+        "Illuminate/Support":"*",
+        "Illuminate/Validation": "*"
+    },
+    "autoload": {
+        "psr-4":{
+            "Jtgrimes\\FormMagic\\":"src"
+        }
+    }
+
+}
