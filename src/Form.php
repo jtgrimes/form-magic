@@ -26,7 +26,10 @@ abstract class Form {
     /**
      * @var array
      */
-    protected $formOptions;
+    protected $formOptions = array(
+        "method"=>"post",
+        "url"=>"#",
+    );
 
     /**
      * @var array
@@ -50,7 +53,7 @@ abstract class Form {
         | By default, the wrapper element will get the following class
         |
         */
-        'wrapperClass' => 'form-group',
+        'wrapperClass' => 'control-group',
 
         /*
         |--------------------------------------------------------------------------
@@ -121,7 +124,7 @@ abstract class Form {
     protected function getValidationRules() {
         $rules = array();
         foreach ($this->fields as $field=>$properties) {
-            $rules[$field] = $properties['rules'];
+            $rules[$field] = array_get($properties,'rules',"");
         }
         return $rules;
     }
