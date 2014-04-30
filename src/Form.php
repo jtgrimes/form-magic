@@ -31,7 +31,7 @@ abstract class Form {
     /**
      * @var array
      */
-    protected $settings;
+    protected $settings = array();
 
     /**
      * @var \Illuminate\Html\FormBuilder
