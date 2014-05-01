@@ -10,9 +10,10 @@
     ],
     "require": {
         "php": ">=5.4.0",
-        "Illuminate/Support":"~4",
-        "Illuminate/Validation": "~4",
-        "Illuminate/Html": "~4"
+        "illuminate/support":"~4",
+        "illuminate/validation": "~4",
+        "illuminate/html": "~4",
+        "illuminate/config": "~4"
     },
     "require-dev": {
         "phpunit/phpunit":"3.7.*"
